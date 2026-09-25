@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafbf4;
+  --foreground: #063f35;
+
+  --batax-forest: #063f35;
+  --batax-forest-dark: #032f28;
+  --batax-lime: #b8ff1f;
+  --batax-soft-lime: #eaf7d1;
+  --batax-cream: #fafbf4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #b8ff1f;
+  color: #063f35;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f4ee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #063f35;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #032f28;
+}
