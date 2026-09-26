@@ -6,7 +6,7 @@ import Navbar from "@/components/home/Navbar";
 import Footer from "@/components/home/Footer";
 import {
   RiArrowLeftRightLine,
-  RiArrowRightUpLine,
+  RiArrowRightLine,
   RiCustomerService2Line,
   RiInstagramLine,
   RiLinkedinBoxLine,
@@ -27,14 +27,14 @@ const contactMethods = [
   {
     icon: RiMailLine,
     title: "Partnerships",
-    text: "Interested in working with BataX or exploring a partnership?",
+    text: "Want to work with BataX or discuss a partnership?",
     value: "hello@batax.com",
     href: "mailto:hello@batax.com",
   },
   {
     icon: RiMessage3Line,
     title: "Safety & Reports",
-    text: "Need help with a suspicious listing, user or exchange?",
+    text: "Need help with a suspicious listing, member or exchange?",
     value: "safety@batax.com",
     href: "mailto:safety@batax.com",
   },
@@ -44,129 +44,128 @@ export default function ContactPage() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    // Connect this to the Django contact endpoint later.
+    // Connect this form to your Django API later.
   }
 
   return (
     <main className="min-h-screen bg-[#FFFCF7] text-[#032F28]">
       <Navbar />
 
-      <section className="overflow-hidden bg-[#032F28]">
-        <div className="mx-auto grid max-w-[1440px] gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:px-12 lg:py-24 xl:px-16">
+      {/* Brand inspiration */}
+      <section className="bg-[#032F28]">
+        <div className="mx-auto grid max-w-[1440px] items-center gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-12 xl:px-16">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[2px] text-[#C1FF25]">
-              The thinking behind BataX
+            <p className="text-xs font-bold uppercase tracking-[1.8px] text-[#C1FF25]">
+              The idea behind BataX
             </p>
 
-            <h1 className="mt-4 max-w-[720px] text-[40px] font-extrabold leading-[1.05] tracking-[-1.5px] text-white sm:text-[54px]">
-              Sometimes you have value. It just is not money.
+            <h1 className="mt-3 max-w-[650px] text-[34px] font-extrabold leading-[1.08] tracking-[-1px] text-white sm:text-[40px]">
+              Value does not always have to begin with money.
             </h1>
 
-            <p className="mt-6 max-w-[650px] text-base leading-7 text-white/75">
-              BataX started with a simple observation: someone can have
-              something valuable and still be unable or unwilling to spend money
-              on the next thing they need.
+            <p className="mt-4 max-w-[610px] text-sm leading-6 text-white/75 sm:text-base">
+              BataX was inspired by a simple idea: people already own things
+              that have value, and sometimes someone else has exactly what they
+              need.
             </p>
 
-            <p className="mt-4 max-w-[650px] text-base leading-7 text-white/75">
-              Somewhere else, another person may already have exactly what they
-              need and may want exactly what the first person has. Traditional
-              barter understood this. BataX brings that idea into a modern,
-              searchable and trust-focused digital experience.
+            <p className="mt-3 max-w-[610px] text-sm leading-6 text-white/75">
+              Instead of every exchange beginning with money, what if we could
+              help two people discover that what one has could be exchanged for
+              what the other has?
             </p>
           </div>
 
-          <div className="relative rounded-[34px] bg-[#C1FF25] p-8 sm:p-10">
-            <RiArrowLeftRightLine className="text-[54px]" />
+          <div className="rounded-[20px] bg-[#C1FF25] p-6">
+            <RiArrowLeftRightLine className="text-3xl" />
 
-            <p className="mt-8 text-sm font-semibold uppercase tracking-[1.5px] text-[#547300]">
-              Our belief
+            <p className="mt-5 text-xs font-semibold uppercase tracking-[1.5px] text-[#5E8000]">
+              What we believe
             </p>
 
-            <blockquote className="mt-3 text-[28px] font-bold leading-[1.2] tracking-[-0.8px] sm:text-[34px]">
-              What you already have could be exactly what someone else is
-              looking for.
-            </blockquote>
+            <h2 className="mt-2 text-2xl font-bold leading-[1.2]">
+              What you have could be exactly what someone else needs.
+            </h2>
 
-            <p className="mt-6 text-sm leading-6 text-[#38534C]">
-              BataX exists to help those two people find each other and make
-              that exchange with greater confidence.
+            <p className="mt-4 text-sm leading-6 text-[#38534C]">
+              BataX exists to make those connections easier to discover and
+              safer to explore.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      {/* Contact intro */}
+      <section className="pb-8 pt-12">
         <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
-          <div className="mx-auto max-w-[720px] text-center">
-            <p className="text-sm font-bold uppercase tracking-[2px] text-[#719B15]">
-              Talk to BataX
+          <div className="max-w-[650px]">
+            <p className="text-xs font-bold uppercase tracking-[1.8px] text-[#719B15]">
+              Contact BataX
             </p>
 
-            <h2 className="mt-3 text-[32px] font-extrabold sm:text-[40px]">
+            <h2 className="mt-2 text-2xl font-bold tracking-[-0.6px] sm:text-[28px]">
               We would love to hear from you.
             </h2>
 
-            <p className="mt-5 leading-7 text-[#667771]">
-              Whether you need support, want to report something, have a
-              partnership idea or simply want to learn more about BataX, there
-              is a way to reach us.
+            <p className="mt-3 text-sm leading-6 text-[#5D6D68]">
+              Need support, want to share feedback, report a concern or discuss
+              working with BataX? Choose the best way to reach us.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
+          <div className="mt-7 grid gap-4 md:grid-cols-3">
             {contactMethods.map(({ icon: Icon, title, text, value, href }) => (
               <a
                 key={title}
                 href={href}
-                className="group rounded-[26px] border border-[#E2E7DF] bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg"
+                className="group rounded-[18px] border border-[#E4E8E0] bg-white p-5 transition hover:-translate-y-1 hover:bg-[#F7FAF2]"
               >
-                <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-[#C1FF25] p-3 text-2xl">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#C1FF25] text-xl">
                   <Icon />
                 </div>
 
-                <h3 className="mt-6 text-lg font-bold">{title}</h3>
+                <h3 className="mt-4 text-sm font-bold">{title}</h3>
 
-                <p className="mt-3 min-h-[48px] text-sm leading-6 text-[#667771]">
+                <p className="mt-2 min-h-[40px] text-sm leading-5 text-[#5D6D68]">
                   {text}
                 </p>
 
-                <div className="mt-6 flex items-center justify-between border-t border-[#E7EBE5] pt-5">
-                  <span className="text-sm font-semibold">{value}</span>
-                  <RiArrowRightUpLine className="text-xl transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                </div>
+                <p className="mt-4 border-t border-[#E8ECE6] pt-4 text-xs font-semibold">
+                  {value}
+                </p>
               </a>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#F1F5E9] py-20 lg:py-28">
-        <div className="mx-auto grid max-w-[1200px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.75fr_1.25fr]">
+      {/* Form */}
+      <section className="pb-12 pt-5">
+        <div className="mx-auto grid max-w-[1440px] gap-8 px-5 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:px-12 xl:px-16">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[2px] text-[#719B15]">
-              Send a message
+            <p className="text-xs font-bold uppercase tracking-[1.8px] text-[#719B15]">
+              Send us a message
             </p>
 
-            <h2 className="mt-3 text-[32px] font-extrabold leading-tight">
-              Tell us how we can help.
+            <h2 className="mt-2 text-2xl font-bold tracking-[-0.6px] sm:text-[28px]">
+              How can we help?
             </h2>
 
-            <p className="mt-5 leading-7 text-[#667771]">
-              Send us a message and the appropriate BataX team can follow up
-              with you.
+            <p className="mt-3 max-w-[400px] text-sm leading-6 text-[#5D6D68]">
+              Fill in the form and your message can be directed to the
+              appropriate BataX team.
             </p>
 
-            <div className="mt-9">
-              <p className="text-xs font-semibold uppercase tracking-[1.5px] text-[#72817C]">
-                Follow BataX
+            <div className="mt-7">
+              <p className="text-xs font-semibold text-[#5D6D68]">
+                Connect with BataX
               </p>
 
-              <div className="mt-4 flex gap-3">
+              <div className="mt-3 flex gap-2">
                 <Link
                   href="#"
                   aria-label="BataX on Instagram"
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-[#032F28] text-xl text-white transition hover:bg-[#C1FF25] hover:text-[#032F28]"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#032F28] text-base text-white transition hover:bg-[#C1FF25] hover:text-[#032F28]"
                 >
                   <RiInstagramLine />
                 </Link>
@@ -174,7 +173,7 @@ export default function ContactPage() {
                 <Link
                   href="#"
                   aria-label="BataX on X"
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-[#032F28] text-xl text-white transition hover:bg-[#C1FF25] hover:text-[#032F28]"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#032F28] text-base text-white transition hover:bg-[#C1FF25] hover:text-[#032F28]"
                 >
                   <RiTwitterXLine />
                 </Link>
@@ -182,7 +181,7 @@ export default function ContactPage() {
                 <Link
                   href="#"
                   aria-label="BataX on LinkedIn"
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-[#032F28] text-xl text-white transition hover:bg-[#C1FF25] hover:text-[#032F28]"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#032F28] text-base text-white transition hover:bg-[#C1FF25] hover:text-[#032F28]"
                 >
                   <RiLinkedinBoxLine />
                 </Link>
@@ -192,45 +191,48 @@ export default function ContactPage() {
 
           <form
             onSubmit={handleSubmit}
-            className="rounded-[30px] bg-white p-6 sm:p-9"
+            className="rounded-[20px] bg-[#F3F5EB] p-5 sm:p-6"
           >
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label className="block">
-                <span className="text-sm font-semibold">First name</span>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label>
+                <span className="text-xs font-semibold">First name</span>
+
                 <input
                   type="text"
                   name="first_name"
                   required
                   placeholder="Your first name"
-                  className="mt-2 h-12 w-full rounded-xl border border-[#D8DFD9] bg-[#FFFCF7] px-4 text-sm outline-none transition focus:border-[#032F28]"
+                  className="mt-2 h-11 w-full rounded-[10px] border border-[#D9DED8] bg-white px-4 text-sm outline-none transition focus:border-[#032F28]"
                 />
               </label>
 
-              <label className="block">
-                <span className="text-sm font-semibold">Last name</span>
+              <label>
+                <span className="text-xs font-semibold">Last name</span>
+
                 <input
                   type="text"
                   name="last_name"
                   required
                   placeholder="Your last name"
-                  className="mt-2 h-12 w-full rounded-xl border border-[#D8DFD9] bg-[#FFFCF7] px-4 text-sm outline-none transition focus:border-[#032F28]"
+                  className="mt-2 h-11 w-full rounded-[10px] border border-[#D9DED8] bg-white px-4 text-sm outline-none transition focus:border-[#032F28]"
                 />
               </label>
             </div>
 
-            <label className="mt-5 block">
-              <span className="text-sm font-semibold">Email address</span>
+            <label className="mt-4 block">
+              <span className="text-xs font-semibold">Email address</span>
+
               <input
                 type="email"
                 name="email"
                 required
                 placeholder="you@example.com"
-                className="mt-2 h-12 w-full rounded-xl border border-[#D8DFD9] bg-[#FFFCF7] px-4 text-sm outline-none transition focus:border-[#032F28]"
+                className="mt-2 h-11 w-full rounded-[10px] border border-[#D9DED8] bg-white px-4 text-sm outline-none transition focus:border-[#032F28]"
               />
             </label>
 
-            <label className="mt-5 block">
-              <span className="text-sm font-semibold">
+            <label className="mt-4 block">
+              <span className="text-xs font-semibold">
                 What can we help with?
               </span>
 
@@ -238,61 +240,62 @@ export default function ContactPage() {
                 name="subject"
                 defaultValue=""
                 required
-                className="mt-2 h-12 w-full rounded-xl border border-[#D8DFD9] bg-[#FFFCF7] px-4 text-sm outline-none transition focus:border-[#032F28]"
+                className="mt-2 h-11 w-full rounded-[10px] border border-[#D9DED8] bg-white px-4 text-sm outline-none transition focus:border-[#032F28]"
               >
                 <option value="" disabled>
                   Select a subject
                 </option>
-                <option value="support">General support</option>
-                <option value="safety">Safety or report</option>
+
+                <option value="support">General Support</option>
+                <option value="safety">Safety or Report</option>
                 <option value="partnership">Partnership</option>
-                <option value="feedback">Product feedback</option>
-                <option value="other">Something else</option>
+                <option value="feedback">Product Feedback</option>
+                <option value="other">Something Else</option>
               </select>
             </label>
 
-            <label className="mt-5 block">
-              <span className="text-sm font-semibold">Message</span>
+            <label className="mt-4 block">
+              <span className="text-xs font-semibold">Message</span>
 
               <textarea
                 name="message"
                 required
-                rows={6}
+                rows={5}
                 placeholder="Tell us more..."
-                className="mt-2 w-full resize-none rounded-xl border border-[#D8DFD9] bg-[#FFFCF7] p-4 text-sm outline-none transition focus:border-[#032F28]"
+                className="mt-2 w-full resize-none rounded-[10px] border border-[#D9DED8] bg-white p-4 text-sm outline-none transition focus:border-[#032F28]"
               />
             </label>
 
             <button
               type="submit"
-              className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#C1FF25] px-7 py-3.5 text-sm font-bold transition hover:bg-[#AEEC18]"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#C1FF25] px-6 py-3 text-xs font-bold transition hover:bg-[#AEEC18]"
             >
               Send Message
-              <RiSendPlaneLine className="text-lg" />
+              <RiSendPlaneLine className="text-base" />
             </button>
           </form>
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-[1000px] px-5 text-center sm:px-8">
-          <RiArrowLeftRightLine className="mx-auto text-4xl text-[#719B15]" />
+      {/* Final CTA */}
+      <section className="bg-[#032F28]">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-5 px-5 py-8 sm:px-8 md:flex-row md:items-center lg:px-12 xl:px-16">
+          <div>
+            <p className="text-xs font-semibold text-[#C1FF25]">
+              Have it. Want it. BataX it.
+            </p>
 
-          <h2 className="mt-5 text-[30px] font-extrabold">
-            Have it. Want it. BataX it.
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-[600px] leading-7 text-[#667771]">
-            We are building a different way for people to access what they need
-            by recognizing the value in what they already have.
-          </p>
+            <h2 className="mt-1 text-xl font-bold text-white">
+              Ready to see what is available?
+            </h2>
+          </div>
 
           <Link
             href="/browse"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#032F28] px-7 py-3.5 text-sm font-bold text-white"
+            className="inline-flex items-center gap-2 rounded-full bg-[#C1FF25] px-6 py-3 text-xs font-bold"
           >
-            Explore BataX
-            <RiArrowRightUpLine />
+            Browse Items
+            <RiArrowRightLine />
           </Link>
         </div>
       </section>

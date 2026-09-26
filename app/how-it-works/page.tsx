@@ -5,63 +5,50 @@ import ExchangeBanner from "@/components/home/ExchangeBanner";
 import {
   RiArrowLeftRightLine,
   RiArrowRightLine,
-  RiCheckboxCircleLine,
+  RiCameraLensLine,
   RiChat3Line,
+  RiCheckboxCircleFill,
   RiFileList3Line,
   RiSearchEyeLine,
   RiShieldCheckLine,
-  RiUserSearchLine,
 } from "react-icons/ri";
 
 const steps = [
   {
-    number: "01",
+    number: "1",
     icon: RiShieldCheckLine,
-    title: "Create and verify your account",
-    text: "Create your BataX account and complete the required verification. Verification helps us build a community where people can make exchange decisions with more confidence.",
+    title: "Create & Verify Your Account",
+    text: "Create your BataX account and complete the required verification to start participating in exchanges.",
   },
   {
-    number: "02",
+    number: "2",
     icon: RiFileList3Line,
-    title: "List what you have",
-    text: "Create a listing with clear photographs, the item's condition, description, location and other useful information. Some listings may require proof that you actually possess the item.",
+    title: "List Your Item",
+    text: "Add clear photos, the item's condition, description, location and other useful information.",
   },
   {
-    number: "03",
+    number: "3",
+    icon: RiCameraLensLine,
+    title: "Verify Possession",
+    text: "Selected listings may require extra proof that you actually possess the item being offered.",
+  },
+  {
+    number: "4",
     icon: RiSearchEyeLine,
-    title: "Tell us what you want",
-    text: "Specify the item, items or category you would consider receiving. You can be specific or keep your preferences flexible and remain open to other offers.",
+    title: "Tell Us What You Want",
+    text: "Choose a specific item, category, alternatives or remain open to suitable exchange offers.",
   },
   {
-    number: "04",
-    icon: RiUserSearchLine,
-    title: "Discover compatible people",
-    text: "BataX looks beyond ordinary search. We help surface people who have something you want and may also be interested in something you have.",
-  },
-  {
-    number: "05",
+    number: "5",
     icon: RiChat3Line,
-    title: "Make an exchange proposal",
-    text: "Found something interesting? Propose an exchange. The other person can review your item, accept, decline or discuss the offer before making a decision.",
+    title: "Find & Discuss a Match",
+    text: "Discover compatible people, review their items and send or respond to an exchange proposal.",
   },
   {
-    number: "06",
+    number: "6",
     icon: RiArrowLeftRightLine,
-    title: "Inspect, exchange and confirm",
-    text: "When both sides agree, follow the safety guidance, inspect the items and complete the handover. Both users confirm the completed exchange on BataX.",
-  },
-];
-
-const matchExamples = [
-  {
-    person: "Person A",
-    has: "PlayStation 5",
-    wants: "iPhone 13",
-  },
-  {
-    person: "Person B",
-    has: "iPhone 13",
-    wants: "PlayStation 5",
+    title: "Meet & Exchange",
+    text: "Follow BataX safety guidance, inspect the items and confirm the exchange when both sides are satisfied.",
   },
 ];
 
@@ -70,161 +57,185 @@ export default function HowItWorksPage() {
     <main className="min-h-screen bg-[#FFFCF7] text-[#032F28]">
       <Navbar />
 
-      <section className="overflow-hidden bg-[#032F28]">
-        <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:px-12 lg:py-24 xl:px-16">
+      {/* Hero */}
+      <section className="bg-[#032F28]">
+        <div className="mx-auto grid max-w-[1440px] items-center gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-12 lg:py-12 xl:px-16">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[2px] text-[#C1FF25]">
-              How BataX works
+            <p className="text-xs font-bold uppercase tracking-[1.8px] text-[#C1FF25]">
+              How BataX Works
             </p>
 
-            <h1 className="mt-4 max-w-[650px] text-[40px] font-extrabold leading-[1.05] tracking-[-1.5px] text-white sm:text-[54px]">
-              From what you have to what you need.
+            <h1 className="mt-3 text-[34px] font-extrabold leading-[1.08] tracking-[-1px] text-white sm:text-[40px]">
+              What you have could get you what you need.
             </h1>
 
-            <p className="mt-6 max-w-[620px] text-base leading-7 text-white/75">
-              BataX brings structure to item-for-item exchange. You list what
-              you have, tell us what you want, find compatible people and
-              complete the exchange with safety measures around the process.
+            <p className="mt-4 max-w-[570px] text-sm leading-6 text-white/75 sm:text-base">
+              BataX connects people who have items they are willing to exchange
+              with people who may have exactly what they want in return.
             </p>
 
             <Link
               href="/browse"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#C1FF25] px-7 py-3.5 text-sm font-bold"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#C1FF25] px-6 py-3 text-sm font-bold text-[#032F28]"
             >
-              Explore Items
+              Browse Items
               <RiArrowRightLine />
             </Link>
           </div>
 
-          <div className="rounded-[32px] bg-[#0A5144] p-6 sm:p-9">
-            <p className="text-sm font-semibold text-[#C1FF25]">
-              A simple BataX match
+          <div className="rounded-[20px] bg-[#0A5144] p-5 sm:p-6">
+            <p className="text-xs font-semibold text-[#C1FF25]">
+              A simple exchange
             </p>
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
-              {matchExamples.map((item, index) => (
-                <div key={item.person} className="contents">
-                  <div className="rounded-[22px] bg-white p-5">
-                    <p className="text-xs text-[#73827D]">{item.person}</p>
+            <div className="mt-4 grid items-center gap-3 sm:grid-cols-[1fr_auto_1fr]">
+              <div className="rounded-[16px] bg-white p-4">
+                <p className="text-[10px] text-[#71817D]">You have</p>
+                <p className="mt-1 text-sm font-bold">Camera</p>
 
-                    <div className="mt-5">
-                      <p className="text-xs text-[#73827D]">Has</p>
-                      <p className="mt-1 font-bold">{item.has}</p>
-                    </div>
+                <p className="mt-4 text-[10px] text-[#71817D]">You want</p>
+                <p className="mt-1 text-sm font-bold">Tablet</p>
+              </div>
 
-                    <div className="mt-4">
-                      <p className="text-xs text-[#73827D]">Wants</p>
-                      <p className="mt-1 font-bold">{item.wants}</p>
-                    </div>
-                  </div>
+              <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#C1FF25] text-xl">
+                <RiArrowLeftRightLine />
+              </span>
 
-                  {index === 0 && (
-                    <div className="flex justify-center">
-                      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C1FF25] text-2xl">
-                        <RiArrowLeftRightLine />
-                      </span>
-                    </div>
-                  )}
-                </div>
-              ))}
+              <div className="rounded-[16px] bg-white p-4">
+                <p className="text-[10px] text-[#71817D]">They have</p>
+                <p className="mt-1 text-sm font-bold">Tablet</p>
+
+                <p className="mt-4 text-[10px] text-[#71817D]">They want</p>
+                <p className="mt-1 text-sm font-bold">Camera</p>
+              </div>
             </div>
 
-            <div className="mt-5 flex items-center gap-2 rounded-2xl bg-[#C1FF25] px-4 py-3 text-sm font-semibold">
-              <RiCheckboxCircleLine className="text-xl" />A direct reciprocal
-              match
+            <div className="mt-3 flex items-center justify-center gap-2 rounded-[12px] bg-[#C1FF25] px-4 py-2.5 text-xs font-bold">
+              <RiCheckboxCircleFill className="text-base" />A compatible
+              exchange
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      {/* Steps */}
+      <section className="py-12 lg:py-16">
         <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
-          <div className="mx-auto max-w-[720px] text-center">
-            <p className="text-sm font-bold uppercase tracking-[2px] text-[#719B15]">
-              The journey
+          <div className="max-w-[650px]">
+            <p className="text-xs font-bold uppercase tracking-[1.8px] text-[#719B15]">
+              Step by step
             </p>
 
-            <h2 className="mt-3 text-[32px] font-extrabold tracking-[-1px] sm:text-[40px]">
-              Six steps. One better way to exchange.
+            <h2 className="mt-2 text-2xl font-bold tracking-[-0.6px] sm:text-[28px]">
+              From listing to exchange
             </h2>
 
-            <p className="mt-5 leading-7 text-[#667771]">
-              BataX does not simply show you listings. The platform connects
-              ownership, intent and trust throughout the exchange.
+            <p className="mt-3 text-sm leading-6 text-[#5D6D68]">
+              BataX makes the process clear from the moment you list an item
+              until both people complete the exchange.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {steps.map(({ number, icon: Icon, title, text }) => (
               <article
                 key={number}
-                className="relative rounded-[26px] border border-[#E3E8E1] bg-white p-7"
+                className="relative rounded-[18px] border border-[#E4E8E0] bg-white p-5"
               >
-                <span className="absolute right-6 top-5 text-[44px] font-black text-[#032F28]/5">
+                <span className="absolute right-5 top-4 text-3xl font-black text-[#032F28]/5">
                   {number}
                 </span>
 
-                <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-[#C1FF25] p-3 text-2xl">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#C1FF25] text-xl">
                   <Icon />
                 </span>
 
-                <h3 className="mt-6 text-lg font-bold">{title}</h3>
+                <h3 className="mt-4 text-sm font-bold">{title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#667771]">{text}</p>
+                <p className="mt-2 text-sm leading-6 text-[#5D6D68]">{text}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-20 lg:py-28">
-        <div className="mx-auto max-w-[1100px] px-5 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[2px] text-[#719B15]">
-                More than search
-              </p>
+      {/* Matching */}
+      <section className="bg-[#F3F5EB] py-12 lg:py-16">
+        <div className="mx-auto grid max-w-[1440px] items-center gap-8 px-5 sm:px-8 lg:grid-cols-2 lg:px-12 xl:px-16">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[1.8px] text-[#719B15]">
+              Smart matching
+            </p>
 
-              <h2 className="mt-3 text-[32px] font-extrabold leading-tight">
-                The important part is finding the right exchange.
-              </h2>
+            <h2 className="mt-2 text-2xl font-bold tracking-[-0.6px] sm:text-[28px]">
+              Finding an item is only half the exchange.
+            </h2>
 
-              <p className="mt-5 leading-7 text-[#667771]">
-                On an ordinary marketplace, you search for someone who has
-                something you want. BataX goes further by considering what that
-                person wants in return.
-              </p>
-            </div>
+            <p className="mt-4 max-w-[560px] text-sm leading-6 text-[#5D6D68]">
+              It is not enough for another person to have what you want. A
+              useful exchange also considers what they are willing to receive.
+              BataX helps surface those opportunities.
+            </p>
+          </div>
 
-            <div className="rounded-[28px] bg-[#F3F7EC] p-7">
-              <p className="text-xs font-semibold uppercase tracking-[1.5px] text-[#719B15]">
-                Example
-              </p>
+          <div className="rounded-[20px] bg-white p-5">
+            <div className="flex gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#C1FF25] font-bold">
+                A
+              </span>
 
-              <div className="mt-5 space-y-4">
-                <div className="rounded-2xl bg-white p-5">
-                  <p className="text-sm">
-                    You have a <strong>camera</strong> and want a{" "}
-                    <strong>tablet</strong>.
-                  </p>
-                </div>
-
-                <div className="flex justify-center text-2xl">
-                  <RiArrowLeftRightLine />
-                </div>
-
-                <div className="rounded-2xl bg-white p-5">
-                  <p className="text-sm">
-                    Another verified member has a <strong>tablet</strong> and
-                    wants a <strong>camera</strong>.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl bg-[#C1FF25] p-5 text-center text-sm font-bold">
-                  BataX identifies the opportunity.
-                </div>
+              <div>
+                <p className="text-xs text-[#71817D]">Member A</p>
+                <p className="mt-1 text-sm font-semibold">
+                  Has a PlayStation 5 and wants an iPhone.
+                </p>
               </div>
             </div>
+
+            <div className="my-4 ml-4 h-6 w-px bg-[#CBD3CC]" />
+
+            <div className="flex gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#032F28] font-bold text-white">
+                B
+              </span>
+
+              <div>
+                <p className="text-xs text-[#71817D]">Member B</p>
+                <p className="mt-1 text-sm font-semibold">
+                  Has an iPhone and wants a PlayStation 5.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-5 rounded-[12px] bg-[#EAF7D1] px-4 py-3 text-xs font-semibold">
+              BataX can identify the reciprocal opportunity between them.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Before completion */}
+      <section className="py-12 lg:py-16">
+        <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
+          <h2 className="text-2xl font-bold tracking-[-0.6px] sm:text-[28px]">
+            Before an exchange is completed
+          </h2>
+
+          <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              "Review the other person's profile and verification.",
+              "Discuss the item and ask important questions.",
+              "Inspect the item before completing the exchange.",
+              "Confirm the exchange and leave an honest review.",
+            ].map((item, index) => (
+              <div key={item} className="flex gap-3">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#C1FF25] text-xs font-bold">
+                  {index + 1}
+                </span>
+
+                <p className="pt-1 text-sm leading-5 text-[#4E5F59]">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
